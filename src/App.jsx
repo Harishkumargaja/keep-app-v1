@@ -27,7 +27,7 @@ function App() {
       console.error('Error adding note:', error);
     } else {
         const { data } = await supabase.from('notes').select('*').order('created_at', { ascending: false });
-        setNotes(data); console.log(data);
+        setNotes(data);
     }
   };
 
@@ -44,18 +44,17 @@ function App() {
 
   const handleDeleteNote = async (id) => {
     const { error } = await supabase.from('notes').delete().eq('id', id);
-    console.log(data);
     if (error) {
       console.error('Error deleting note:', error);
     } else {
         const { data } = await supabase.from('notes').select('*').order('created_at', { ascending: false });
-        setNotes(data); console.log(data);
+        setNotes(data); 
     }
   };
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">My Keep App</h1>
+      <h1 className="text-2xl font-bold mb-4">Harish's Keep App</h1>
       <NoteForm onAddNote={handleAddNote} />
       <NoteList notes={notes} onEditNote={handleEditNote} onDeleteNote={handleDeleteNote} />
     </div>
