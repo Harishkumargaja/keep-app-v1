@@ -23,7 +23,7 @@ function Note({ note, onEditNote, onDeleteNote }) {
   };
 
   return (
-    <div className="bg-white p-4 rounded-md shadow-md relative">
+    <div className="bg-yellow p-4 rounded-md shadow-md relative">
       {isEditing ? (
         <>
           <input
@@ -51,7 +51,7 @@ function Note({ note, onEditNote, onDeleteNote }) {
           <h2 className="text-lg font-semibold mb-2">{note.title}</h2>
           <p>{note.content}</p>
           <div className="absolute top-2 right-2 flex">
-            <button onClick={handleEdit} className="text-blue-500 mr-2">
+            <button onClick={handleEdit} className="text-emerald-900 mr-2">
               <FaEdit />
             </button>
             <button onClick={() => onDeleteNote(note.id)} className="text-red-500">
