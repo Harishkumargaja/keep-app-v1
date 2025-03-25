@@ -23,32 +23,32 @@ function Note({ note, onEditNote, onDeleteNote }) {
   };
 
   return (
-    <div className="bg-white p-4 rounded-md shadow-md relative">
+    <div className="bg-gray-400 p-4 rounded-md shadow-md relative">
       {isEditing ? (
         <>
           <input
             type="text"
             value={editedTitle}
             onChange={(e) => setEditedTitle(e.target.value)}
-            className="w-full p-2 mb-2 border rounded-md"
+            className="w-full p-2 mb-2 border rounded-md  text-white"
           />
           <textarea
             value={editedContent}
             onChange={(e) => setEditedContent(e.target.value)}
-            className="w-full p-2 border rounded-md"
+            className="w-full p-2 border rounded-md  text-white"
           />
           <div className="mt-2 flex justify-end">
             <button onClick={handleSave} className="bg-green-500 text-white p-2 rounded-md mr-2">
               <FaSave />
             </button>
-            <button onClick={handleCancel} className="bg-gray-400 text-white p-2 rounded-md">
+            <button onClick={handleCancel} className="bg-gray-900 text-white p-2 rounded-md">
               <FaTimes />
             </button>
           </div>
         </>
       ) : (
         <>
-          <h2 className="text-lg font-semibold mb-2">{note.title}</h2>
+          <h2 className="text-lg font-semibold mb-2  text-white">{note.title}</h2>
           <p>{note.content}</p>
           <div className="absolute top-2 right-2 flex">
             <button onClick={handleEdit} className="text-emerald-900 mr-2">

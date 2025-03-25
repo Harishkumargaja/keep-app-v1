@@ -103,9 +103,9 @@ function App() {
         path="/"
         element={
           session ? (
-            <div className="container mx-auto p-4 bg-gray-500">
-              <h1 className="text-2xl font-bold mb-4">My Keep App</h1>
-              <h2 className="text-xl font-bold mb-4">Welcome, {session.user.email}</h2>
+            <div className="container mx-auto p-4 bg-gray-900">
+              <h1 className="text-2xl font-bold mb-4 text-blue-200">My Keep App</h1>
+              <h2 className="text-xl font-bold mb-4 text-blue-200">Welcome, {session.user.email}</h2>
               <button
                 onClick={() => supabase.auth.signOut()}
                 className="bg-red-500 text-white p-2 rounded-md"
