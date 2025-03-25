@@ -13,7 +13,7 @@ function NoteForm({ onAddNote }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="mb-4">
+    <form onSubmit={handleSubmit} className="mb-4 bg-white">
       <input
         type="text"
         placeholder="Title"

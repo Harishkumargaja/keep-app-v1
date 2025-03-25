@@ -23,7 +23,7 @@ function Note({ note, onEditNote, onDeleteNote }) {
   };
 
   return (
-    <div className="bg-yellow p-4 rounded-md shadow-md relative">
+    <div className="bg-white p-4 rounded-md shadow-md relative">
       {isEditing ? (
         <>
           <input

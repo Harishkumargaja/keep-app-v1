@@ -103,7 +103,7 @@ function App() {
         path="/"
         element={
           session ? (
-            <div className="container mx-auto p-4">
+            <div className="container mx-auto p-4 bg-gray-500">
               <h1 className="text-2xl font-bold mb-4">My Keep App</h1>
               <h2 className="text-xl font-bold mb-4">Welcome, {session.user.email}</h2>
               <button

@@ -32,7 +32,7 @@ function LoginPage() {
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="bg-white p-8 rounded-md shadow-md w-96">
+      <div className="bg-gray p-8 rounded-md shadow-md w-96">
         <h2 className="text-2xl font-semibold mb-4 text-center">Login</h2>
         {error && <p className="text-red-500 mb-2">{error}</p>}
         <form onSubmit={handleLogin}>
